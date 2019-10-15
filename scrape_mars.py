@@ -108,6 +108,11 @@ def scrape():
         hemisphere_image_info.append(img_info)
 
     mars_info["mars_hemisphere_info"] = hemisphere_image_info
+
+    # Close the browser after scraping
+    browser.quit()
+
+    # Return results
     return mars_info
 
 if __name__ == "__main__":
